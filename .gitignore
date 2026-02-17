@@ -1,0 +1,24 @@
+# Data folders
+data/
+Agastya_Project/data/
+
+# HuggingFace cache
+hf_cache/
+
+# ChromaDB and embeddings
+chromadb/
+*.bin
+*.pickle
+*.sqlite3
+*.json
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+.env
+
+# Ignore data and embeddings
+data/
+chromadb/
