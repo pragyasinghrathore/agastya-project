@@ -1,19 +1,22 @@
-Agastya Project — Retrieval-Augmented Generation (RAG) Pipeline
-Overview
+# Agastya Project — Retrieval-Augmented Generation (RAG) Pipeline
 
-Agastya is an end-to-end Retrieval-Augmented Generation (RAG) pipeline designed to demonstrate practical implementation of:
+## Overview
 
-Data preprocessing and semantic chunking
+Agastya is an end-to-end **Retrieval-Augmented Generation (RAG)** pipeline designed to demonstrate practical implementation of:
 
-Vector embedding generation
+- Data preprocessing and semantic chunking  
+- Vector embedding generation  
+- Persistent vector storage using ChromaDB  
+- Context-aware retrieval using LangChain  
+- Clustering analysis of embeddings  
 
-Persistent vector storage using ChromaDB
+The project is structured to be **modular, reproducible, and scalable**, with clear separation between data processing, retrieval logic, and analytical components.
 
-Context-aware retrieval using LangChain
+---
 
-Clustering analysis of embeddings
+## Project Structure
 
-The project is structured to be modular, reproducible, and scalable, with clear separation between data processing, retrieval logic, and analytical components.Agastya_Project/
+Agastya_Project/
 │
 ├── Agastya_pipeline.ipynb
 ├── Rag_LangchainopenAI.ipynb
@@ -22,91 +25,107 @@ The project is structured to be modular, reproducible, and scalable, with clear 
 │
 ├── .gitignore
 └── README.md
-Notebooks
-1. Agastya_pipeline.ipynb
 
-Loads and preprocesses raw textual data
+---
 
-Performs semantic chunking
+## Notebooks
 
-Generates vector embeddings
+### 1. Agastya_pipeline.ipynb
+- Loads and preprocesses raw textual data  
+- Performs semantic chunking  
+- Generates vector embeddings  
+- Stores embeddings persistently using ChromaDB  
+- Automatically creates the required folder structure  
 
-Stores embeddings persistently using ChromaDB
+This notebook builds the **core embedding pipeline** of the project.
 
-Automatically creates required folder structure
+---
 
-This notebook builds the core embedding pipeline.
+### 2. Rag_LangchainopenAI.ipynb
+- Connects to the vector database  
+- Implements Retrieval-Augmented Generation (RAG)  
+- Performs semantic similarity search  
+- Generates contextual responses using retrieved documents  
 
-2. Rag_LangchainopenAI.ipynb
+Demonstrates practical RAG system implementation using OpenAI-based models.
 
-Connects to the vector database
+---
 
-Implements Retrieval-Augmented Generation
+### 3. Rag_Langchaingemini.ipynb
+- Implements RAG using Gemini-based language models  
+- Allows comparison between different LLM backends  
+- Demonstrates flexibility in model integration  
 
-Performs semantic similarity search
+---
 
-Generates contextual responses using retrieved documents
+### 4. Cluster_analysis.ipynb
+- Applies clustering techniques to embedding vectors  
+- Analyzes semantic groupings within the dataset  
+- Explores structural relationships and topical similarity  
 
-Demonstrates practical RAG system implementation.
-3. Cluster_analysis.ipynb
+---
 
-Applies clustering techniques to embedding vectors
+## How to Run
 
-Analyzes semantic groupings
+1. Run `Agastya_pipeline.ipynb`  
+   → Generates processed data and vector embeddings  
 
-Explores structural relationships within the dataset
+2. Run `Rag_LangchainopenAI.ipynb` or `Rag_Langchaingemini.ipynb`  
+   → Enables retrieval-based querying  
 
-How to Run
+3. Run `Cluster_analysis.ipynb`  
+   → Performs embedding-level analysis  
 
-Run Agastya_pipeline.ipynb
-→ Generates processed data and vector embeddings
+---
 
-Run Rag_LangchainopenAI.ipynb
-→ Enables retrieval-based querying
+## Technologies Used
 
-Run Cluster_analysis.ipynb
-→ Performs embedding-level analysis
-Technologies Used
+- Python  
+- LangChain  
+- ChromaDB  
+- Vector Embeddings  
+- Retrieval-Augmented Generation (RAG)  
+- Unsupervised Clustering  
 
-Python
+---
 
-LangChain
-
-ChromaDB
-
-Vector Embeddings
-
-Retrieval-Augmented Generation (RAG)
-
-Unsupervised Clustering
-
-Data & Embeddings
+## Data & Embeddings
 
 Large generated files such as:
 
-Processed datasets
+- Processed datasets  
+- Embedding JSON files  
+- ChromaDB persistence files  
 
-Embedding JSON files
-
-ChromaDB persistence files
-
-are intentionally excluded from version control using .gitignore.
+are intentionally excluded from version control using `.gitignore`.
 
 All artifacts are generated locally by running the main pipeline notebook.
-Future Work
 
-The long-term vision of Agastya is to expand into a broader semantic knowledge system focused on ancient scriptures and traditional knowledge sources.
+---
+
+## Future Work
+
+The long-term vision of Agastya is to expand into a broader semantic knowledge system focused on **ancient scriptures and traditional knowledge sources**.
 
 Planned improvements include:
 
-Incorporating additional datasets from ancient scriptures
+- Incorporating additional datasets related to ancient scriptures  
+- Expanding corpus coverage for deeper contextual retrieval  
+- Improving semantic chunking strategies  
+- Optimizing embedding storage and indexing  
+- Evaluating different embedding models for domain-specific performance  
 
-Expanding corpus coverage for deeper contextual retrieval
+The goal is to evolve Agastya into a **scalable retrieval system** capable of structured exploration of historical and philosophical texts.
 
-Improving semantic chunking strategies
+---
 
-Optimizing embedding storage and indexing
+## Purpose
 
-Evaluating different embedding models for domain-specific performance
+This project demonstrates hands-on experience with:
 
-The goal is to evolve Agastya into a scalable retrieval system capable of structured exploration of historical and philosophical texts.
+- Designing end-to-end RAG pipelines  
+- Working with vector databases  
+- Building modular NLP systems  
+- Performing embedding-based analysis  
+
+It is intended to showcase practical skills relevant to **AI/ML engineering and applied NLP roles**.
